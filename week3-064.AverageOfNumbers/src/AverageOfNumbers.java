@@ -14,9 +14,9 @@ public class AverageOfNumbers {
     
 
         public static double average(ArrayList<Integer> list) {
-        int total = list.size();
-        int sum = sum(list);
-        return (double) sum / total;
+            int total = list.size();
+            int sum = sum(list);
+            return (double) sum / total;
         }
 
     public static void main(String[] args) {
