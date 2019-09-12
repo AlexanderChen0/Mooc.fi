@@ -3,7 +3,10 @@ import java.util.ArrayList;
 public class LengthsOfStrings {
     public static ArrayList<Integer> lengths(ArrayList<String> list) {
         ArrayList<Integer> lengthList = new ArrayList<Integer>();
-        // write code here
+        for (String current : list){
+            int size = current.length();
+            lengthList.add(size);
+        }
         
         return lengthList;
     }
