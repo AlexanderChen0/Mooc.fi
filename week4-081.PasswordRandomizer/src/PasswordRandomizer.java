@@ -3,7 +3,6 @@ import java.util.Random;
 public class PasswordRandomizer {
     // Define the variables
     final String alphabet = "abcdefghijklmnopqrstuvwxyz";
-    private String password;
     private int length;
     private Random randomizer = new Random();
 
@@ -14,7 +13,7 @@ public class PasswordRandomizer {
 
     public String createPassword() {
         // write code that returns a randomized password
-        password = "";
+        String password = "";
         while(password.length() < length) password += alphabet.charAt(randomizer.nextInt(26));
         return password;
     }
