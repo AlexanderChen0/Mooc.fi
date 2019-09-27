@@ -12,8 +12,9 @@ public class Dice {
 
     public int roll() {
         // create here a random number belongig to range 1-numberOfSided
-        int randomNo = random.nextInt(numberOfSides +1);
-        while(randomNo == 0)randomNo = random.nextInt(numberOfSides +1);
-        return randomNo;
+        /*int randomNo = random.nextInt(numberOfSides +1);
+        while(randomNo == 0)randomNo = random.nextInt(numberOfSides +1);*/
+        //Following is a simpler solution with no while loop
+        return random.nextInt(numberOfSides) + 1;
     }
 }
