@@ -64,6 +64,12 @@ deps-jar:
 -compile-depend:
 
 -do-compile:
+    [javac] Compiling 1 source file to /Users/alexanderchen/Documents/Code/Java/Mooc.fi/mooc-2013-OOProgrammingWithJava-PART1/week4-080.Dice/build/classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+    [javac] warning: [options] source value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] 4 warnings
 
 -post-compile:
 
@@ -82,4 +88,4 @@ compile:
 compile-test:
 
 BUILD SUCCESSFUL
-Total time: 0 seconds
+Total time: 1 second
