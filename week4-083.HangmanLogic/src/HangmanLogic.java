@@ -27,7 +27,13 @@ public class HangmanLogic {
         // program here the functionality for making a guess
 
         // if the letter has already been guessed, nothing happens
-        
+        if(guessedLetters.contains(letter));
+        else if(word.contains(letter)){
+            guessedLetters += letter;
+        } else {
+            guessedLetters += letter;
+            numberOfFaults++;
+        }
         // it the word does not contains the guessed letter, number of faults increase
         // the letter is added among the already guessed letters
     }
