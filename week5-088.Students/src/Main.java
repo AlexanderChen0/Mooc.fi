@@ -17,16 +17,17 @@ public class Main {
             String studentNumber =  input.nextLine();
             Student student = new Student(nameIn, studentNumber);
             list.add(student);
+            //Alternate way: list.add(new Student(nameIn, studentNumber));
         }
         
-        for(Student out : list){
-            System.out.println(out);
+        for(Student student : list){
+            System.out.println(student);
         }
         
         System.out.println("Give search term: " + "\nResults: ");
         String search = input.nextLine();
-        for(Student stu : list){
-            if(stu.getName().contains(search))System.out.println(stu);
+        for(Student student : list){
+            if(student.getName().contains(search))System.out.println(student);
         }
     }
 }
