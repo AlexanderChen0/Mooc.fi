@@ -11,10 +11,6 @@ public class MyDate {
         this.year = vv;
     }
 
-    public String toString() {
-        return this.day + "." + this.month + "." + this.year;
-    }
-
     public boolean earlier(MyDate compared) {
         if (this.year < compared.year) {
             return true;
@@ -42,6 +38,14 @@ public class MyDate {
             day = 1;
         } else day++;
     }
+    
+    public void advance(int days){
+        int count = 0;
+        while(count < days){
+            advance();
+            count++;
+        }
+    }
 
     /*
      * In assignment 92 method differneceInYears was added to MyDate 
@@ -54,4 +58,8 @@ public class MyDate {
         System.out.println(returnYear);
         return Math.abs(returnYear / 365);
     }  
+    
+     public String toString() {
+        return this.day + "." + this.month + "." + this.year;
+    }
 }
