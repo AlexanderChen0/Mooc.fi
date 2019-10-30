@@ -31,6 +31,17 @@ public class MyDate {
 
         return false;
     }
+    
+    public void advance(){
+        if(day >= 30 && month == 12){
+            day = 1;
+            month = 1;
+            year++;
+        } else if(day >= 30) {
+            month++;
+            day = 1;
+        } else day++;
+    }
 
     /*
      * In assignment 92 method differneceInYears was added to MyDate 
@@ -42,11 +53,5 @@ public class MyDate {
         returnYear += (year - compared.year) * 365;
         System.out.println(returnYear);
         return Math.abs(returnYear / 365);
-    }
-    
-    public int differneceInYears(MyDate compared) {
-        return -99;
-    }
-
-  
+    }  
 }
