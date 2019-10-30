@@ -3,9 +3,9 @@ public class MyDate {
     private int month;
     private int year;
 
-    public MyDate(int day, int montd, int year) {
+    public MyDate(int day, int month, int year) {
         this.day = day;
-        this.month = montd;
+        this.month = month;
         this.year = year;
     }
 
@@ -30,4 +30,11 @@ public class MyDate {
         return false;
     }
 
+    public int differenceInYears(MyDate compared){
+        int returnYear = (day - compared.day);
+        returnYear += (month - compared.month) * 30;
+        returnYear += (year - compared.year) * 365;
+        System.out.println(returnYear);
+        return Math.abs(returnYear / 365);
+    }
 }
