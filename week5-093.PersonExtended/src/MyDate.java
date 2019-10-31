@@ -1,4 +1,7 @@
 
+import java.util.Calendar;
+
+
 public class MyDate {
 
     private int day;
@@ -36,9 +39,8 @@ public class MyDate {
         int returnYear = (day - compared.day);
         returnYear += (month - compared.month) * 30;
         returnYear += (year - compared.year) * 365;
-        System.out.println(returnYear);
-        return Math.abs(returnYear / 365);
-    }  
+        return returnYear / 365;
+    }
     
     public String toString() {
         return this.day + "." + this.month + "." + this.year;
