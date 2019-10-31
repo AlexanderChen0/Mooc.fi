@@ -10,18 +10,17 @@ public class Person {
     }
     
     
-    public int age() {
-// calculate the age based on the birthday and the current day
-        // you get the current day as follows: 
-        // Calendar.getInstance().get(Calendar.DATE);
-        // Calendar.getInstance().get(Calendar.MONTH) + 1; // January is 0 so we add one
-        // Calendar.getInstance().get(Calendar.YEAR);
-        return 0;
+    public int age(){
+        MyDate current = new MyDate(Calendar.getInstance().get(Calendar.DATE),
+                                    Calendar.getInstance().get(Calendar.MONTH) + 1,
+                                    Calendar.getInstance().get(Calendar.YEAR));
+        
+        return Math.abs(current.differenceInYears(birthday));
+                                    
     }
     
     public boolean olderThan(Person compared) {
-        // compare the ages based on birthdays
-        return false;
+        return birthday.earlier(compared.birthday);
     }
     
     public String getName() {
