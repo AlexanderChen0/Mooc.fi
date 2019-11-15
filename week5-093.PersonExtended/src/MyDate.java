@@ -8,10 +8,10 @@ public class MyDate {
     private int month;
     private int year;
 
-    public MyDate(int pv, int kk, int vv) {
-        this.day = pv;
-        this.month = kk;
-        this.year = vv;
+    public MyDate(int day, int month, int year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
     }
 
     public boolean earlier(MyDate compared) {
@@ -39,6 +39,7 @@ public class MyDate {
         int returnYear = (day - compared.day);
         returnYear += (month - compared.month) * 30;
         returnYear += (year - compared.year) * 365;
+        System.out.println(returnYear);
         return returnYear / 365;
     }
     
