@@ -28,7 +28,6 @@ public class MyDate {
                 && this.day < compared.day) {
             return true;
         }
-
         return false;
     }
     
